@@ -1,5 +1,7 @@
 <a 
-    href="#" 
+    [routerLink]="[recipe.id]"
+    routerLinkActive='active'
+    style="cursor: pointer;"
     class="list-group-item clear-fix" >
     <h4 class="list-group-item-heading">{{recipe.name}}</h4>
     <p class="list-group-item-text">{{recipe.description}}</p>

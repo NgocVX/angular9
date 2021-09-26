@@ -9,6 +9,7 @@ export class RecipeService {
 
   private recipes: Recipe[] = [
     new Recipe(
+      1,
       "Bún bò",
       "Món đặc sản của Huế",
       "https://upload.wikimedia.org/wikipedia/commons/0/00/Bun-Bo-Hue-from-Huong-Giang-2011.jpg",
@@ -19,6 +20,7 @@ export class RecipeService {
       ]
     ),
     new Recipe(
+      2,
       "Phở",
       "Phở Việt Name",
       "https://cdn.pixabay.com/photo/2020/06/02/12/20/soup-5250765_960_720.jpg",
@@ -29,6 +31,7 @@ export class RecipeService {
       ]
     ),
     new Recipe(
+      3,
       "Bánh xèo tôm nhảy",
       "Đặc sản Bình Định",
       "https://cdn.daotaobeptruong.vn/wp-content/uploads/2020/01/banh-xeo-mien-tay.jpg",
@@ -44,6 +47,10 @@ export class RecipeService {
 
   getRecipes() {
     return this.recipes.slice();
+  }
+
+  getRecipe(id: number) {
+    return this.recipes.find(el => el.id === id);
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
